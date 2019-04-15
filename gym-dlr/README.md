@@ -1,10 +1,10 @@
 # gym-dlr
 
-The Dynamic Load Redistribution environment is a single agent environment, featuring continuous state and action spaces which can be used to monitor and tame performance hotspots in Cloud Storage. Currently, one task is supported:
+The Dynamic Load Redistribution environment is a single agent environment, featuring continuous state and action spaces which can be used to mitigate performance hotspots in Cloud Storage. 
 
 ## Dlr
 
-The Dlr task initializes a single Affinity Controller agent and rewards a score between 0 and 1 based on the Response Time(COSBENCH) performance metrics of the cluster. In order to get a perfect reward, the agent will need to know how to change affinities of each node, based on the system stats(VMSTATS) of each node. Here a perfect reward will mean the best performance that a cluster could achieve at a given state. Hence, the relative nature of the reward score makes it a difficult task to achieve.
+The Dlr task initializes a Controller agent and rewards a score between 0 and 1 based on the Response Time(COSBENCH) performance metrics of the cluster. In order to get a perfect reward, the agent will need to know how to change affinities and weight values of each node, based on the system stats(SAR data) of each node. Here a perfect reward will mean the best performance that a cluster could achieve at a given state. Hence, the relative nature of the reward score makes it a difficult task to achieve.
 
 # Installation
 
